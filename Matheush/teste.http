@@ -1,0 +1,34 @@
+### testar a raiz do projeto
+GET http://localhost:5218/
+### Cadastrar funcionario
+POST http://localhost:5218/funcionario/cadastrar
+Content-Type: application/json
+{
+    "FuncionarioId": 1,
+    "nome": "João Da Silva",
+    "cpf": "123.456.789.00"
+}
+
+### Listar funcionario
+GET http://localhost:5218/funcionario/listar
+
+### cadastrar folha
+POST http://localhost:5218/folha/cadastrar
+Content-Type: application/json
+{
+    "folhaId": 1,
+    "valor": "20.0",
+    "quantidade": "160",
+    "mes": "1",
+    "ano": "2024",
+    "SalarioBruto": "3000.0",
+    "impostoIrrf": "375.0",
+    "impostoInss": "150.0",
+    "impostoFgts": "240.0",
+    "alarioLiquido": "2475.0",
+}
+### Listar folha
+GET http://localhost:5218/folha/listar
+
+### buscar folha
+GET http://localhost:5257/folha/buscar/1
